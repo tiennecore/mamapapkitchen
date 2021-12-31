@@ -9,23 +9,157 @@
 body{
   margin: 0;
   padding: 0;
-  background: var(--Dark-grayish-blue);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oranienbaum', serif;
+  font-size: 1.5rem;
+  color: #4f4f4c;
 }
-.container{
+nav{
+  position: relative;
+  width: 100vw;
+  .container{
+    margin-top: .5em;
+    padding: .4em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    h1{
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+      li{
+
+        padding: .5rem;
+        border: solid 3px white;
+        border-radius: 1rem;
+        transition: background-color .5s ease;
+
+        &:hover{
+          background-color: #e5e5c9;
+        }
+      }
+    }
+  }
+}
+main{
   display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  h1{
-    font-size: 3em;
+  .container_pres{
+    padding-left: 2em;
+    display: flex;
+    align-items: center;
+    height: 50%;
+
+    .info{
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 2em;
+      gap: 2em;
+      padding-left: 5rem;
+      h1{
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+      span{
+        align-self: flex-start;
+
+
+      }
+      &:nth-child(1) span {
+        align-self: center;
+      }
+      a{
+        width: 10%;
+        height: auto;
+      }
+    }
+    .photo_pres{
+      max-width: 40%;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 2em;
+      &:hover img{
+        transform: scale(1.2);
+      }
+      img{
+        transition: .5s;
+      }
+    }
   }
-  a{
-    color: var(--Soft-violet);
+  .container_info{
+    width: 70%;
+    margin-left: 15%;
+    border-radius: .2rem .2rem;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .bar{
+      width: 100%;
+      height: .5rem;
+      border-radius: .2rem;
+      background-color: #e5e5c9;
+    }
+    .info{
+      margin: 1em;
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .logo_info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img{
+        width: 2.5em;
+      }
+      h1{
+        font-size: 1rem;
+      }
+    }
+
   }
-  .description{
-    font-size: 2em;
-    padding: 20px 0;
+  .container_description{
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    .texte{
+      margin-left: 3em;
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      span{
+        margin-top: 2em;
+        width: 75%;
+      }
+    }
+    .img_cuisine{
+      max-width: 11%;
+      height: auto;
+      margin-left: 20em;
+      border-radius: 1rem;
+      position: relative;
+      overflow: hidden;
+      &:hover img{
+        transform: scale(1.2);
+      }
+      img{
+        transition: .5s;
+      }
+    }
   }
 }
