@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─
+/*─                                                                                      RESET
+/*─
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+/*─────────────────────────────────────────────────────────────────────────────────────────────────*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  /*─ Debug font size on iphone when landscape orientation ─*/
+  -webkit-font-smoothing: subpixel-antialiased;
+  /*─ Debug safari font weight when fixed element on the page ─*/
+  -webkit-font-smoothing: antialiased;
+  /*─ idem : Debug safari font weight when fixed element on the page ─*/
+}
+
+html, body, nav, header, footer, div, span,
+h1, h2, h3, p,
+a, img,
+ul, li,
+table, form, label, input, textarea, select, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  display: block;
+  box-sizing: border-box;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input[type=submit]:hover,
+button:hover {
+  cursor: pointer;
+}
+
+input::-ms-clear {
+  display: none;
+  /*─ IE11 → remove cross to close ─*/
+}
+
+textarea {
+  overflow: auto;
+  /*─ Hide scroll bar on IE ─*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, video, svg, picture {
+  display: block;
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "eesti";
+  font-size: 16px;
+  background: #FDFDFD;
+  font-family: "Fanwood Text", serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Tenor Sans", sans-serif;
+}
+
+:root {
+  /* exemple :*/
+  --Dark-grayish-blue: hsl(240, 17%, 80%);
+  --Soft-violet: hsl(222, 59%, 43%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oranienbaum", serif;
+  font-size: 1.5rem;
+  color: #4f4f4c;
+}
+
+nav {
+  position: relative;
+  width: 100vw;
+}
+nav .container {
+  margin-top: 0.5em;
+  padding: 0.4em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .container h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+nav .container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+nav .container ul li {
+  padding: 0.5rem;
+  border: solid 3px white;
+  border-radius: 1rem;
+  transition: background-color 0.5s ease;
+}
+nav .container ul li:hover {
+  background-color: #e5e5c9;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .container_pres {
+  padding-left: 2em;
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+main .container_pres .info {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2em;
+  gap: 2em;
+  padding-left: 5rem;
+}
+main .container_pres .info h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+main .container_pres .info span {
+  align-self: flex-start;
+}
+main .container_pres .info:nth-child(1) span {
+  align-self: center;
+}
+main .container_pres .info a {
+  width: 10%;
+  height: auto;
+}
+main .container_pres .photo_pres {
+  max-width: 40%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2em;
+}
+main .container_pres .photo_pres:hover img {
+  transform: scale(1.2);
+}
+main .container_pres .photo_pres img {
+  transition: 0.5s;
+}
+main .container_info {
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 0.2rem 0.2rem;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .container_info .bar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #e5e5c9;
+}
+main .container_info .info {
+  margin: 1em;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+main .container_info .logo_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .container_info .logo_info img {
+  width: 2.5em;
+}
+main .container_info .logo_info h1 {
+  font-size: 1rem;
+}
+main .container_description {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+main .container_description .texte {
+  margin-left: 3em;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .container_description .texte span {
+  margin-top: 2em;
+  width: 75%;
+}
+main .container_description .img_cuisine {
+  max-width: 11%;
+  height: auto;
+  margin-left: 20em;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+main .container_description .img_cuisine:hover img {
+  transform: scale(1.2);
+}
+main .container_description .img_cuisine img {
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=/styles.962e011e.css.map */
